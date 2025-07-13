@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xpanz Official - Solusi Panel Premium & Aman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* CSS VVIP, SMOOTH, HD & PROFESIONAL by Gemini */
+        
+        :root {
+            --bg-color: #121212;
+            --card-color: #1F1F1F;
+            --primary-text: #F0F0F0;
+            --secondary-text: #A0A0A0;
+            --accent-gold: #FFD700;
+            --accent-blue: #00A3FF;
+            --shadow-light: rgba(0, 0, 0, 0.4);
+            --shadow-heavy: rgba(0, 0, 0, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-text);
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        /* Header & Hero Section */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, rgba(31, 31, 31, 0.8), rgba(18, 18, 18, 0.9)), url('https://www.transparenttextures.com/patterns/carbon-fibre-v2.png');
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            text-shadow: 2px 2px 10px var(--shadow-light);
+        }
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary-text);
+            margin-top: 10px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 50px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue));
+            border-radius: 2px;
+            margin: 10px auto 0;
+        }
+
+        /* Card Styling */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .card {
+            background-color: var(--card-color);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid transparent;
+            box-shadow: 0 8px 30px var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px var(--shadow-heavy);
+            border-color: var(--accent-blue);
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .card-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .card-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+        
+        .card-list li i {
+            color: var(--accent-gold);
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-text);
+            margin-top: 20px;
+        }
+        
+        .price .amount {
+             color: var(--accent-blue);
+             font-size: 2rem;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #444;
+        }
+        
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .unlimited {
+            font-weight: bold;
+            color: var(--accent-gold);
+            font-style: italic;
+        }
+        
+        /* Accordion for Other Services */
+        .accordion-item {
+            background-color: var(--card-color);
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 20px;
+            font-size: 1.1rem;
+            color: var(--primary-text);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .accordion-header:hover {
+            background-color: #2a2a2a;
+        }
+
+        .accordion-header::after {
+            content: '\f078'; /* Font Awesome chevron-down */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            transition: transform 0.3s ease;
+        }
+        
+        .accordion-header.active::after {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            background-color: #181818;
+            padding: 0 20px;
+        }
+        
+        .accordion-content .content-inner {
+            padding: 20px 0;
+        }
+
+        /* Contact & Payment Section */
+        .contact-section {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--bg-color);
+            font-weight: 600;
+            background: linear-gradient(90deg, var(--accent-gold), #FFC300);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+            margin: 10px;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(90deg, #25D366, #128C7E);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+        
+        .btn-telegram {
+            background: linear-gradient(90deg, #2AABEE, #229ED9);
+            box-shadow: 0 4px 15px rgba(42, 171, 238, 0.3);
+            color: white;
+        }
+        
+        .btn-telegram:hover {
+             box-shadow: 0 8px 25px rgba(42, 171, 238, 0.5);
+        }
+
+        .payment-info {
+            margin-top: 30px;
+        }
+        
+        .payment-info img {
+            max-width: 250px;
+            border-radius: 10px;
+            border: 3px solid var(--accent-gold);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            background-color: #0A0A0A;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+
+        .footer span {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            .header .subtitle {
+                font-size: 1rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Xpanz Official!</h1>
+        <p class="subtitle">🔍 Cari Panel Yang Murah, Aman & Pastinya Berkeamanan Tinggi? Solusinya ada di sini. <br> Kualitas dan keamanan adalah prioritas kami dengan layanan premium terjangkau!</p>
+    </header>
+
+    <main>
+        <section id="panel-hosting" class="section">
+            <div class="container">
+                <h2 class="section-title">Layanan Panel Hosting</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3 class="card-title">Panel Public</h3>
+                        <p style="color: var(--secondary-text); margin-bottom: 20px;">Pakai VPS Kami, Instan & Terkelola.</p>
+                        <div class="price-list">
+                            <div class="price-item"><span>RAM 1 GB</span> <strong>Rp 500</strong></div>
+                            <div class="price-item"><span>RAM 2 GB</span> <strong>Rp 1.000</strong></div>
+                            <div class="price-item"><span>RAM 5 GB</span> <strong>Rp 2.500</strong></div>
+                            <div class="price-item"><span>RAM 10 GB</span> <strong>Rp 5.000</strong></div>
+                            <div class="price-item"><span class="unlimited">RAM UNLIMITED</span> <strong class="unlimited">Rp 6.000</strong></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Panel Private</h3>
+                         <p style="color: var(--secondary-text); margin-bottom: 20px;">Lebih privat, aman, dan bebas atur server.</p>
+                        <div class="price-list">
+                            <div class="price-item"><span>RAM 1 GB</span> <strong>Rp 1.000</strong></div>
+                            <div class="price-item"><span>RAM 2 GB</span> <strong>Rp 2.000</strong></div>
+                            <div class="price-item"><span>RAM 5 GB</span> <strong>Rp 5.000</strong></div>
+                            <div class="price-item"><span>RAM 10 GB</span> <strong>Rp 10.000</strong></div>
+                            <div class="price-item"><span class="unlimited">RAM UNLIMITED</span> <strong class="unlimited">Rp 12.000</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="reseller" class="section">
+            <div class="container">
+                <h2 class="section-title">Panel Fresh (Bisnis Panel)</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3 class="card-title">Reseller</h3>
+                        <p class="price"><span class="amount">Rp 10.000</span></p>
+                        <ul class="card-list">
+                            <li><i class="fa-solid fa-circle-check"></i>Bisa Jual Panel Sepuasnya</li>
+                             <li><i class="fa-solid fa-circle-check"></i>Anti Delay</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Admin</h3>
+                        <p class="price"><span class="amount">Rp 15.000</span></p>
+                        <ul class="card-list">
+                             <li><i class="fa-solid fa-circle-check"></i>Semua keuntungan Reseller</li>
+                             <li><i class="fa-solid fa-circle-check"></i>Bisa Open Reseller Panel</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Owner</h3>
+                        <p class="price"><span class="amount">Rp 25.000</span></p>
+                        <ul class="card-list">
+                           <li><i class="fa-solid fa-circle-check"></i>Semua keuntungan Admin</li>
+                           <li><i class="fa-solid fa-circle-check"></i>Bisa Open Partner & Admin</li>
+                        </ul>
+                    </div>
+                     <div class="card" style="border-color: var(--accent-gold);">
+                        <h3 class="card-title" style="color: var(--accent-gold);"><i class="fa-solid fa-crown"></i> PENGURUS VVIP</h3>
+                        <p class="price"><span class="amount" style="color: var(--accent-gold);">Rp 45.000</span></p>
+                        <ul class="card-list">
+                           <li><i class="fa-solid fa-star"></i>Semua Keuntungan Owner</li>
+                           <li><i class="fa-solid fa-star"></i>Bisa Jual Subdomain</li>
+                           <li><i class="fa-solid fa-star"></i>Free Admin Saluran WA</li>
+                           <li><i class="fa-solid fa-star"></i>Free Web Create Nokos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="other-services" class="section">
+            <div class="container">
+                <h2 class="section-title">Produk & Layanan Digital Lainnya</h2>
+                <div class="accordion">
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">Open Murid Unbanned WhatsApp (Rp 20.000)</button>
+                        <div class="accordion-content">
+                            <div class="content-inner">
+                                <ul class="card-list">
+                                    <li><i class="fa-solid fa-book-open"></i>Metode All Opsi (Spam Fast, Permanen, dll)</li>
+                                    <li><i class="fa-solid fa-book-open"></i>Seting Up Mt New</li>
+                                    <li><i class="fa-solid fa-book-open"></i>Full Pengajaran Sampai Bisa</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">List Sewa Bot WA</button>
+                        <div class="accordion-content">
+                             <div class="content-inner price-list">
+                                <div class="price-item"><span>Sewa Bot Push Kontak</span> <strong>Rp 10.000</strong></div>
+                                <div class="price-item"><span>Sewa Bot Jpm</span> <strong>Rp 10.000</strong></div>
+                                <div class="price-item"><span>Sewa Bot Jaga Grup</span> <strong>Rp 15.000</strong></div>
+                                <div class="price-item"><span>Sewa Bot Bug WA & Telegram</span> <strong>Mulai Rp 20.000</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">List Nokos (Nomor Kosong) All Negara</button>
+                        <div class="accordion-content">
+                            <div class="content-inner price-list">
+                                <div class="price-item"><span>🇮🇩 Indonesia (+62)</span> <strong>Rp 5.000</strong></div>
+                                <div class="price-item"><span>🇵🇭 Philipiness (+63)</span> <strong>Rp 10.000</strong></div>
+                                <div class="price-item"><span>🇺🇸 USA (+1)</span> <strong>Rp 20.000</strong></div>
+                                <div class="price-item"><span>🇷🇺 Russia (+7)</span> <strong>Rp 20.000</strong></div>
+                                <div class="price-item"><span>🇨🇳 China (+86)</span> <strong>Rp 25.000</strong></div>
+                                <div class="price-item"><span>Dan banyak negara lainnya...</span> <strong>Kontak kami</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">List VPS Digital Ocean</button>
+                        <div class="accordion-content">
+                             <div class="content-inner price-list">
+                                <div class="price-item"><span>Ram 2 GB Core 2</span> <strong>Rp 25.000</strong></div>
+                                <div class="price-item"><span>Ram 4 GB Core 2</span> <strong>Rp 30.000</strong></div>
+                                <div class="price-item"><span>Ram 8 GB Core 4</span> <strong>Rp 45.000</strong></div>
+                                <div class="price-item"><span>Ram 16 GB Core 8</span> <strong>Rp 65.000</strong></div>
+                                <div class="price-item"><span>Ram 32 GB Core 8</span> <strong>Rp 80.000</strong></div>
+                                <p style="margin-top: 15px; color: var(--secondary-text);">Garansi 15 Hari, Aktif 30 Hari, Free Install Panel & Subdomain.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="accordion-item">
+                        <button class="accordion-header">Menyediakan Layanan Lainnya</button>
+                        <div class="accordion-content">
+                            <div class="content-inner">
+                                <p>Open Murid Banned WA, Murid Reset OTP, Murid Suntik All Sosmed, Jual Script Bot, Jual GB/Saluran WA, Kebutuhan Hosting, dan masih banyak lagi. Tanyakan langsung pada kami!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Minat? Hubungi Kami!</h2>
+                <p style="color: var(--secondary-text); margin-bottom: 30px;">Respon cepat 24 jam. Siap membantu kebutuhan digital Anda.</p>
+                <div>
+                    <a href="https://wa.me/6285135366878" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Utama</a>
+                    <a href="https://wa.me/6283116014312" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Cadangan</a>
+                    <a href="https://t.me/xpanz10" target="_blank" class="btn btn-telegram"><i class="fab fa-telegram"></i> Telegram</a>
+                </div>
+                
+                <div class="payment-info">
+                     <h3 style="margin: 40px 0 20px 0; font-size: 1.5rem;">Metode Pembayaran</h3>
+                     <p>DANA / GOPAY: <strong>085135366878</strong></p>
+                     <p>Pembayaran via QRIS:</p>
+                     <a href="https://files.catbox.moe/bdhdcz.png" target="_blank">
+                        <img src="https://files.catbox.moe/bdhdcz.png" alt="QRIS Payment Code">
+                     </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+        <p>No Copyright, Teks By <span>Fanxz</span> | Website Didesain & Dikembangkan oleh <span>Gemini AI</span></p>
+    </footer>
+
+    <script>
+        // JavaScript for Ac
